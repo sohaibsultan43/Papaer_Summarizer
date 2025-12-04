@@ -1,5 +1,5 @@
-// Use empty string when served from same origin (FastAPI), or localhost for dev
-const API_URL = import.meta.env.VITE_API_URL || '';
+// Use /api for Vercel serverless, or custom URL for development
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export async function fetchPapers() {
   const response = await fetch(`${API_URL}/papers`);
